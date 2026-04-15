@@ -20,12 +20,6 @@ class GetRequester:
         return data
     
 
-#EXECUTION AND TESTING:
-test = GetRequester("https://learn-co-curriculum.github.io/json-site-example/endpoints/people.json")
-
-data = test.get_response_body()
-
-print(data)
 
 
 
