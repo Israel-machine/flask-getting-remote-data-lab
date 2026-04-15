@@ -7,20 +7,17 @@ class GetRequester:
         self.url = url
 
     def get_response_body(self):
-        #Query End-Point
         response = requests.get(self.url)
-        if response.status_code==200:
-            return self.load_json(response.text)
+        if response.status_code == 200:
+            data = self.load_json(response.text)
+            
+            return json.dumps(data, indent=2).encode('utf-8')
         else:
             return None
         
-    #CONVERTS & RETURNS END POINT DATA TO JSON 
     @staticmethod
     def load_json(raw_data):
-        data = json.loads(raw_data)
-        return data
-    
-
+        return json.loads(raw_data)
 
 
 
