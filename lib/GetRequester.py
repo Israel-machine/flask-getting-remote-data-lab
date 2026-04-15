@@ -15,7 +15,8 @@ class GetRequester:
             return None
         
     #CONVERTS & RETURNS END POINT DATA TO JSON 
-    def load_json(self, raw_data):
+    @staticmethod
+    def load_json(raw_data):
         data = json.loads(raw_data)
         return data
     
