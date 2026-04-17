@@ -16,8 +16,8 @@ class GetRequester:
         # else:
         #     return None
         
-    @staticmethod
-    def load_json():
+    # @staticmethod
+    def load_json(self):
         response = requests.get(self.url)
         return response.json()
         # data = json.loads(raw_data)
